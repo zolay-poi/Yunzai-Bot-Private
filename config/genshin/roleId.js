@@ -138,4 +138,7 @@ let actWeapon = ["腐殖之剑","风花之颂","嘟嘟可故事集","「渔获�
 //皮肤
 let costumes = ['海风之梦',"闪耀协奏","纱中幽兰","霓裾翩跹"];
 
+import {assignRoleId} from './myRoleId.js'
+assignRoleId({roleId, wifeData, abbr, abbr2, roleId5, roleId4, actWeapon, costumes})
+
 export { roleId , wifeData , abbr , abbr2 , roleId5 , roleId4 , actWeapon , costumes };
