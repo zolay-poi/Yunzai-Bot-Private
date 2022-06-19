@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh" style="font-size: 110.4px;">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="">
+  <title>圣遗物详情</title>
+  <link rel="shortcut icon" href="#"/>
+  <link rel="stylesheet" type="text/css" href="{{_res_path}}genshin/artifactsInfo/style.css?v=1.0"/>
+  <link rel="preload" href="{{_res_path}}font/tttgbnumber.ttf" as="font"/>
+</head>
+
+<body>
+<div class="container" id="container" style="width: 480px">
+  <div class="detail detail--outside-app">
+    <div class="detail__body">
+      <div style="margin-top: 0.1rem">
+        <!--        <h1 class="detail__title">海染砗磲</h1>-->
+        <div class="detail__divider"></div>
+      </div>
+      <div class="detail__content--wrap">
+        <div class="detail__content">
+          <div class="yz-detail">
+            <div class="relic-describe">
+              <div class="relic-describe__top">
+                <div class="relic-describe__top--image">
+                  <img src="{{props.icon}}?x-oss-process=image/quality,q_75/resize,s_120" alt="">
+                </div>
+                <div class="relic-describe__top--title">{{props.title}}</div>
+              </div>
+              <div class="relic-describe__footer">
+                <div class="relic-describe__footer--list">
+                  {{each props.table item}}
+                  <div class="relic-describe__footer--item">
+                    <div class="relic-describe__footer--key">&nbsp;{{item.key}}</div>
+                    <div class="relic-describe__footer--value">{{item.value}}</div>
+                  </div>
+                  {{/each}}
+                  <div class="relic-describe__footer--item">
+                    <div class="relic-describe__footer--key">获取途径：</div>
+                    <div class="relic-describe__footer--value">
+                      <span id="yz-how-get"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {{@dataContent}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="logo">Created By Yunzai-Bot & Zolay-Poi</div>
+</div>
+
+<script src="{{_res_path}}genshin/artifactsInfo/artifactsInfo.js"></script>
+
+</body>
+
+</html>
