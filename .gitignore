@@ -136,3 +136,4 @@ dump.rdb
 !/plugins/目录说明.txt
 !/plugins/demo/*
 *.psd
+/yarn.lock
