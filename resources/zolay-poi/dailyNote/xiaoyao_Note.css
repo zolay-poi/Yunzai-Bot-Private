@@ -259,7 +259,7 @@ body {
 	width: 200px;
 }
 
-.right_model{
+#container {
 	position: relative;
 }
 
@@ -269,7 +269,13 @@ body {
 	display: inline-block;
 	position: absolute;
 	right: 80px;
-	bottom: 10px;
+	bottom: 40px;
+}
+
+.bottom_time {
+	position: absolute;
+	/*right: 80px;*/
+	bottom: 80px;
 }
 
 .bottom_image img {
