@@ -18,13 +18,33 @@
 /*	src: url(../../font/HYWenHei-HEW.ttf);*/
 /*}*/
 
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.background {
+	background: url("./img/20220226002229.jpg") 0 0 no-repeat;
+	position: absolute;
+	top: -50px;
+	left: -50px;
+	width: calc(100% + 50px);
+	height: calc(100% + 50px);
+	z-index: -1;
+	filter: blur(10px);
+}
+
 #container {
 	min-height: 627px;
 	height: auto;
 	width: 1137px;
+	padding: 10px;
 	/*background-color: rgba(0, 0, 0, 0.5);*/
   /*background-color: rgb(133, 218, 255, 0.1);*/
   background-color: transparent;
+	background-position-x: 10px;
+	background-position-y: 10px;
+	background-repeat: no-repeat;
 }
 
 .left_model {
@@ -257,4 +277,8 @@
 
 .red{
 	color: #d9766c;
+}
+
+.text-limit {
+	font-size: 24px;
 }

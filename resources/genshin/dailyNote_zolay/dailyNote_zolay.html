@@ -9,7 +9,8 @@
 		</style>
 	</head>
 	<body>
-		<div class="container" id="container" style=" background-image: url({{_res_path}}/genshin/dailyNote_zolay/icon/bg/{{imgs}});">
+  <div class="background"></div>
+  <div class="container" id="container" style=" background-image: url({{_res_path}}/genshin/dailyNote_zolay/icon/bg/{{imgs}});">
 			<div class="left_model">
 				<div class="list">
 					<div class="div">
@@ -23,7 +24,7 @@
 						{{else}}树脂已完全恢复{{/if}}</span>
 				</div>
 					<div class="div sumCount">
-						<span class="{{if current_resin>=159}}red{{/if}}">{{current_resin}}</span>/{{max_resin}}
+						<span class="{{if current_resin>=150}}red{{/if}}">{{current_resin}}</span>/<span class="text-limit">{{max_resin}}</span>
 					</div>
 				</div>
 				<div class="list">
@@ -40,7 +41,7 @@
 					</div>
 					<div class="div sumCount">
 						<!-- /{{max_home_coin}} -->
-						<span class="{{if current_home_coin/max_home_coin > 0.9}}red{{/if}}">{{current_home_coin}}</span>
+						<span class="{{if current_home_coin/max_home_coin > 0.9}}red{{/if}}">{{current_home_coin}}</span>/<span style="font-size: 18px">{{max_home_coin}}</span>
 
 					</div>
 				</div>
@@ -54,7 +55,7 @@
 						<span class="bottom">今日委托奖励{{if is_extra_task_reward_received==1}}已{{else}}未{{/if}}领取</span>
 					</div>
 					<div class="div sumCount">
-						<span class="{{if finished_task_num<4}}red{{/if}}">{{finished_task_num}}</span>/{{total_task_num}}
+						<span class="{{if finished_task_num<4}}red{{/if}}">{{finished_task_num}}</span>/<span class="text-limit">{{total_task_num}}</span>
 					</div>
 				</div>
 				<div class="list">
@@ -67,7 +68,7 @@
 						<span class="bottom">本周剩余消耗减半次数</span>
 					</div>
 					<div class="div sumCount">
-						<span class="{{if remain_resin_discount_num>0}}red{{/if}}">{{3-remain_resin_discount_num}}</span>/{{resin_discount_num_limit}}
+						<span class="{{if remain_resin_discount_num>0}}red{{/if}}">{{remain_resin_discount_num}}</span>/<span class="text-limit">{{resin_discount_num_limit}}</span>
 					</div>
 				</div>
 				<div class="list">
