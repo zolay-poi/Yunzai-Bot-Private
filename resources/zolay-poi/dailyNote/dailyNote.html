@@ -3,18 +3,18 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 		<link rel="shortcut icon" href="#" />
-		<link rel="stylesheet" type="text/css" href="{{_res_path}}/genshin/dailyNote_zolay/xiaoyao_Note.css?v=1.0" />
+		<link rel="stylesheet" type="text/css" href="{{resPath}}/xiaoyao_Note.css?v=1.0" />
 		<style>
 			
 		</style>
 	</head>
 	<body>
   <div class="background"></div>
-  <div class="container" id="container" style=" background-image: url({{_res_path}}/genshin/dailyNote_zolay/icon/bg/{{imgs}});">
+  <div class="container" id="container" style=" background-image: url({{resPath}}/icon/bg/{{imgs}});">
 			<div class="left_model">
 				<div class="list">
 					<div class="div">
-						<img src="{{_res_path}}/genshin/dailyNote_zolay/icon/树脂.png" alt="">
+						<img src="{{resPath}}/icon/树脂.png" alt="">
 					</div>
 					<div class="div">
 						<span class="title">原粹树脂</span>
@@ -29,7 +29,7 @@
 				</div>
 				<div class="list">
 					<div class="div">
-						<img src="{{_res_path}}/genshin/dailyNote_zolay/icon/洞天宝钱.png" alt="">
+						<img src="{{resPath}}/icon/洞天宝钱.png" alt="">
 					</div>
 					<div class="div">
 						<span class="title">洞天宝钱</span>
@@ -47,7 +47,7 @@
 				</div>
 				<div class="list">
 					<div class="div">
-						<img src="{{_res_path}}/genshin/dailyNote_zolay/icon/每日.png" alt="">
+						<img src="{{resPath}}/icon/每日.png" alt="">
 					</div>
 					<div class="div">
 						<span class="title">每日委托</span>
@@ -60,7 +60,7 @@
 				</div>
 				<div class="list">
 					<div class="div">
-						<img src="{{_res_path}}/genshin/dailyNote_zolay/icon/周本.png" alt="">
+						<img src="{{resPath}}/icon/周本.png" alt="">
 					</div>
 					<div class="div">
 						<span class="title">值得铭记的强敌</span>
@@ -73,7 +73,7 @@
 				</div>
 				<div class="list">
 					<div class="div">
-						<img src="{{_res_path}}/genshin/dailyNote_zolay/icon/质变仪.png" alt="">
+						<img src="{{resPath}}/icon/质变仪.png" alt="">
 					</div>
 					<div class="div">
 						<span class="title">参量质变仪</span>
@@ -112,7 +112,7 @@
 							</div>
 						</div> -->
 						<div class="jdt">
-							<img src="{{_res_path}}/genshin/dailyNote_zolay/speed/{{list.percentage}}.png"/>
+							<img src="{{resPath}}/speed/{{list.percentage}}.png"/>
 						</div>
 						<div class="icon">
 							<img src="{{list.avatar_side_icon}}" alt="">
@@ -129,9 +129,11 @@
 					<div class="bottom_time">
 						{{day_mb2}}
 					</div>
-					<!-- <div class="bottom_image">
-						<img src="{{_res_path}}/genshin/dailyNote_zolay/icon/图片.png" alt="">
-					</div> -->
+          {{if !!faceName}}
+					<div class="bottom_image">
+						<img src="{{resPath}}/face/{{faceName}}" alt="">
+					</div>
+          {{/if}}
 				</div>
 
 			</div>
