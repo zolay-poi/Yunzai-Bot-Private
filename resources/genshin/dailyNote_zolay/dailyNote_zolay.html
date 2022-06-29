@@ -65,7 +65,7 @@
 					<div class="div">
 						<span class="title">值得铭记的强敌</span>
 						<div class="kb"></div>
-						<span class="bottom">本周剩余消耗减半次数</span>
+						<span class="bottom">本周树脂消耗减半剩余次数</span>
 					</div>
 					<div class="div sumCount">
 						<span class="{{if remain_resin_discount_num>0}}red{{/if}}">{{remain_resin_discount_num}}</span>/<span class="text-limit">{{resin_discount_num_limit}}</span>
@@ -88,7 +88,9 @@
 					</div>
 					<div class="div sumCount">
 						<span
-							class="{{if transformer.obtained && transformer.reached }}red{{/if}}">{{if transformer.obtained }}{{if transformer.reached}}可使用
+							class="{{if transformer.obtained && transformer.reached }}red{{/if}}"
+              style="font-size: 24px;"
+            >{{if transformer.obtained }}{{if transformer.reached}}可使用
 							{{else}}冷却中{{/if}}
 								{{else}}尚未获得{{/if}}</span>
 					</div>
