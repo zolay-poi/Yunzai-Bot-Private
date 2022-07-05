@@ -21,6 +21,7 @@
 body {
 	padding: 0;
 	margin: 0;
+	overflow: hidden;
 }
 
 .background {
@@ -28,8 +29,8 @@ body {
 	position: absolute;
 	top: -50px;
 	left: -50px;
-	width: calc(100% + 50px);
-	height: calc(100% + 50px);
+	width: calc(1600px + 50px);
+	height: calc(900px + 50px);
 	z-index: -1;
 	filter: blur(10px);
 }
