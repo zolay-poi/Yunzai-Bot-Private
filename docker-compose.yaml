@@ -1,23 +1,28 @@
-version: "3"
+version: "3.9"
 services:
   yunzai-bot:
-    build: . # 使用 Dockerfile 本地构建
+    container_name: yunzai-bot
+    # build: . # 使用 Dockerfile 本地构建，需要Linux环境和非常良好的网络
+    image: swr.cn-south-1.myhuaweicloud.com/sirly/yunzai-bot:latest   # 基础镜像
+    # image: swr.cn-south-1.myhuaweicloud.com/sirly/yunzai-bot:plus   # 扩展镜像，内含ffmpeg和python，可以直接运行相应插件
+    # image: sirly/yunzai-bot:latest  # 使用Docker Hub镜像，GitHub源
     # image: ccr.ccs.tencentyun.com/xm798/yunzai-bot:latest   # 使用镜像
-    # image: swr.cn-south-1.myhuaweicloud.com/sirly/yunzai-bot:latest   # 备用精简镜像
+    # image: xm798/yunzai-bot:latest
     restart: always
     volumes:
-      - ./Yunzai/config.js:/app/Yunzai-Bot/config/config.js # config.js 配置文件，配置文件中 redis 地址填写 "redis"
-      - ./Yunzai/logs:/app/Yunzai-Bot/logs # 日志文件
-      - ./Yunzai/data:/app/Yunzai-Bot/data # 数据文件
+      - ./yunzai/config.js:/app/Yunzai-Bot/config/config.js # config.js 配置文件，配置文件中 redis 地址填写 "redis"
+      - ./yunzai/logs:/app/Yunzai-Bot/logs # 日志文件
+      - ./yunzai/data:/app/Yunzai-Bot/data # 数据文件
       # 以下目录映射有需要可创建对应文件夹，并自行取消注释。
-      # - ./Yunzai/global_img:/app/Yunzai-Bot/resources/global_img         # 全局表情目录
-      # - ./Yunzai/global_record:/app/Yunzai-Bot/resources/global_record   # 全局语音目录
-      # - ./Yunzai/lib/example:/app/Yunzai-Bot/lib/example                 # 自定义js插件目录
-      # - ./Yunzai/plugins:/app/Yunzai-Bot/plugins                         # 插件目录
+      # - ./yunzai/global_img:/app/Yunzai-Bot/resources/global_img         # 全局表情目录
+      # - ./yunzai/global_record:/app/Yunzai-Bot/resources/global_record   # 全局语音目录
+      # - ./yunzai/lib/example:/app/Yunzai-Bot/lib/example                 # 自定义js插件目录
+      # - ./yunzai/plugins:/app/Yunzai-Bot/plugins                         # 插件目录
     depends_on:
       redis: { condition: service_healthy }
 
   redis:
+    container_name: yunzai-redis
     image: "redis:alpine"
     restart: always
     volumes:
