@@ -66,6 +66,8 @@ app.get('/:type', function (req, res) {
   let tplPath = `${app}/${page}/${page}.html`;
   if (data._plugin) {
     tplPath = `../plugins/${data._plugin}/resources/${app}/${page}.html`
+  }else if(data._no_type_path){
+    tplPath = `${app}/${page}.html`;
   }
   res.render(tplPath, data)
 });

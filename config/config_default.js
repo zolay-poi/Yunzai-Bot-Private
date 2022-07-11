@@ -48,6 +48,7 @@ let config = {
   //yakultoo.feishu.cn/docs/doccnnepmeWeweGSbjgBM8vIsCe
   cookieDoc: "docs.qq.com/doc/DUWNVQVFTU3liTVlO",
   disableMsg:"私聊已禁用", //禁用私聊Bot提示内容
+  decreaseCookie:0,   //退群删ck  三种模式 0不处理 1退群删除ck并且删除好友（注：用户多个群存在时不会处理）  2退群把ck处理为关闭自动签到跟推送等（注：用户多个群存在时不会处理）
   //推送任务
   pushTask: {
     signTime: "0 2 0 * * ?", //签到任务执行时间，Cron表达式，默认00:02开始执行，每10s签到一个
